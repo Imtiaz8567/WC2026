@@ -1,1 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#c8a84b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="WC2026">
+<link rel="manifest" id="manifestLink">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>WC 2026 — Match Analyst</title>
+<style>
+:root {
+  --gold:#c8a84b; --gold2:#e6c96e; --bg:#080d18; --s1:#0f1623; --s2:#151f30;
+  --border:#1a2640; --text:#dde4f0; --dim:#6a7d99; --blue:#4a9eff;
+  --green:#22c55e; --red:#f87171; --live:#ff6b35;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;background:var(--bg);color:var(--text);
+  font-family:-apple-system,'Inter','Segoe UI',sans-serif;font-size:14px;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER ── */
+header{
+  background:linear-gradient(180deg,#0d1b35 0%,var(--s1) 100%);
+  border-bottom:2px solid var(--gold);
+  padding:env(safe-area-inset-top,16px) 16px 0;
+  position:sticky;top:0;z-index:200
+}
+.header-row{display:flex;align-items:center;gap:10px;padding-bottom:14px}
+.logo{font-size:26px}
+.header-titles{flex:1}
+.header-titles h1{font-size:16px;font-weight:800;color:var(--gold);letter-spacing:.5px}
+.header-titles p{font-size:10px;color:var(--dim);margin-top:2px}
+.clock{text-align:right}
+.clock .time{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--text)}
+.clock .date{font-size:10px;color:var(--dim)}
+
+/* nav tabs */
+.tabs{display:flex;gap:6px;padding:0 0 12px}
+.tab{flex:1;padding:7px 4px;border-radius:20px;border:1px solid var(--border);
+  background:var(--s2);color:var(--dim);font-size:11px;font-weight:700;
+  cursor:pointer;text-align:center;transition:all .15s;letter-spacing:.3px}
+.tab.active{background:var(--gold);color:#000;border-color:var(--gold)}
+
+/* ── MAIN ── */
+main{padding:14px 14px 100px;max-width:600px;margin:0 auto}
+
+/* api key setup */
+.setup-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.setup-card h2{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:10px}
+.setup-card p{font-size:12px;color:var(--dim);margin-bottom:12px;line-height:1.6}
+.input-row{display:flex;gap:8px;margin-bottom:10px}
+input[type=text],input[type=password]{
+  flex:1;background:#060b15;border:1px solid var(--border);border-radius:8px;
+  color:var(--text);font-size:13px;padding:10px 12px;outline:none;
+  font-family:monospace
+}
+input:focus{border-color:var(--gold)}
+.btn{padding:9px 18px;border-radius:8px;border:none;cursor:pointer;
+  font-size:12px;font-weight:700;letter-spacing:.5px;transition:all .15s}
+.btn-gold{background:var(--gold);color:#000}
+.btn-gold:hover{background:var(--gold2)}
+.btn-dim{background:var(--border);color:var(--dim)}
+.btn-blue{background:#1e3a6e;color:var(--blue);border:1px solid #2a4a8e}
+.btn-green{background:#0f3020;color:var(--green);border:1px solid #1a5030}
+.btn-red{background:#2a0a0a;color:var(--red);border:1px solid #4a1a1a}
+
+/* match cards */
+.day-label{font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;
+  text-transform:uppercase;padding:16px 0 8px;border-bottom:1px solid var(--border);
+  margin-bottom:10px}
+.match-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;
+  padding:14px;margin-bottom:10px;transition:border-color .2s}
+.match-card.live-card{border-color:var(--live);box-shadow:0 0 16px rgba(255,107,53,.12)}
+.match-card.analysis-card{border-color:var(--gold)}
+
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.stage-badge{font-size:9px;font-weight:700;color:var(--dim);letter-spacing:1px;text-transform:uppercase}
+.status-badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px}
+.status-upcoming{color:var(--blue);background:#0d1f40}
+.status-live{color:var(--live);background:#1f0f00;animation:pulse 2s infinite}
+.status-ft{color:var(--green);background:#0a1f10}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+
+.teams-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.team-block{text-align:center;flex:1}
+.team-flag{font-size:30px;line-height:1}
+.team-name{font-size:12px;font-weight:700;margin-top:4px;line-height:1.2}
+.vs-sep{font-size:11px;color:var(--border);font-weight:700;flex-shrink:0}
+
+.kickoff-row{text-align:center;margin-bottom:10px}
+.kickoff-time{font-size:18px;font-weight:800;color:var(--text);font-variant-numeric:tabular-nums}
+.countdown{font-size:11px;color:var(--dim);margin-top:2px}
+.countdown.soon{color:#fbbf24}
+
+.card-actions{display:flex;gap:6px}
+.action-btn{flex:1;padding:8px 6px;border-radius:8px;border:none;cursor:pointer;
+  font-size:11px;font-weight:700;text-align:center;transition:all .15s}
+.action-btn:disabled{opacity:.35;cursor:default}
+.btn-pre{background:#0d1f40;color:var(--blue);border:1px solid #1a3060}
+.btn-post{background:#0a1a10;color:var(--green);border:1px solid #1a4020}
+.btn-notify{background:#1a1500;color:#fbbf24;border:1px solid #3a3000}
+.btn-notify.active{background:#2a2000;border-color:var(--gold)}
+
+/* analysis panel */
+.analysis-panel{background:var(--bg);border-radius:0;padding:0}
+.analysis-header{background:linear-gradient(135deg,#0d1b35,#080d18);
+  border-bottom:2px solid var(--gold);padding:16px;text-align:center;
+  position:sticky;top:72px;z-index:100}
+.analysis-type-badge{font-size:9px;font-weight:800;letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:8px}
+.badge-pre{color:var(--blue)}
+.badge-post{color:var(--green)}
+.analysis-teams{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:6px}
+.analysis-team{text-align:center}
+.analysis-flag{font-size:32px}
+.analysis-tname{font-size:13px;font-weight:700;margin-top:4px}
+.analysis-vs{color:var(--border);font-weight:700}
+.analysis-meta{font-size:10px;color:var(--dim);margin-top:4px}
+.back-btn{position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  background:var(--border);border:none;color:var(--dim);border-radius:8px;
+  padding:6px 10px;cursor:pointer;font-size:12px;font-weight:700}
+
+.analysis-body{padding:16px}
+.loading-state{text-align:center;padding:48px 20px}
+.loading-icon{font-size:40px;margin-bottom:14px}
+.loading-text{color:var(--gold);font-weight:700;margin-bottom:6px}
+.loading-sub{color:var(--dim);font-size:12px}
+.progress-track{margin-top:20px;height:2px;background:var(--border);border-radius:1px;overflow:hidden}
+.progress-bar{height:100%;background:var(--gold);border-radius:1px;width:30%;
+  animation:slide 1.8s ease-in-out infinite}
+@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(400%)}}
+
+.md-content{}
+.md-h2{font-size:13px;font-weight:800;color:var(--gold);margin:20px 0 8px;
+  padding-bottom:6px;border-bottom:1px solid var(--border)}
+.md-h3{font-size:12px;font-weight:700;color:var(--blue);margin:12px 0 6px}
+.md-bullet{font-size:13px;color:#a0b4cc;padding-left:14px;margin-bottom:3px;
+  position:relative;line-height:1.6}
+.md-bullet::before{content:'·';position:absolute;left:4px;color:var(--gold)}
+.md-p{font-size:13px;color:#96aac0;margin-bottom:5px;line-height:1.7}
+.md-bold{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px}
+.md-gap{height:6px}
+.error-box{background:#1a0505;border:1px solid #4a1515;border-radius:8px;
+  padding:14px;color:var(--red);font-size:12px;line-height:1.6}
+
+/* permission banner */
+.perm-banner{background:#1a1200;border:1px solid #3a2800;border-radius:10px;
+  padding:12px 14px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.perm-banner .icon{font-size:22px;flex-shrink:0}
+.perm-banner .text{flex:1;font-size:12px;color:#fbbf24;line-height:1.5}
+.perm-banner .text strong{color:#f59e0b;display:block;margin-bottom:2px}
+
+/* empty state */
+.empty{text-align:center;padding:56px 20px;color:var(--dim)}
+.empty .icon{font-size:48px;margin-bottom:14px;opacity:.5}
+.empty p{font-size:13px}
+
+/* schedule list */
+.sched-date{font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;
+  text-transform:uppercase;padding:14px 0 6px;border-bottom:1px solid var(--border);margin-bottom:8px}
+.sched-row{display:flex;align-items:center;gap:10px;padding:9px 10px;
+  background:var(--s1);border-radius:8px;margin-bottom:6px;cursor:pointer;
+  border:1px solid var(--border)}
+.sched-row:hover{border-color:var(--gold)}
+.sched-grp{font-size:9px;font-weight:700;color:var(--gold);width:22px;flex-shrink:0;text-align:center}
+.sched-teams{flex:1;font-size:12px;font-weight:600;color:var(--text)}
+.sched-time{font-size:11px;color:var(--blue);font-variant-numeric:tabular-nums;flex-shrink:0}
+.sched-notif{font-size:16px;flex-shrink:0}
+
+/* settings */
+.settings-section{margin-bottom:24px}
+.settings-label{font-size:10px;font-weight:700;color:var(--dim);letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:10px}
+.settings-row{display:flex;align-items:center;gap:12px;
+  background:var(--s1);border:1px solid var(--border);border-radius:10px;
+  padding:13px 14px;margin-bottom:8px}
+.settings-row .icon{font-size:20px;flex-shrink:0}
+.settings-row .info{flex:1}
+.settings-row .info strong{font-size:13px;color:var(--text);display:block}
+.settings-row .info span{font-size:11px;color:var(--dim);margin-top:2px;display:block}
+.settings-row .action{flex-shrink:0}
+
+/* bottom padding for safe area */
+.safe-bottom{height:env(safe-area-inset-bottom,20px)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <div class="logo">⚽</div>
+    <div class="header-titles">
+      <h1>FIFA WORLD CUP 2026</h1>
+      <p id="headerSub">Match Analyst · BST (UTC+6)</p>
+    </div>
+    <div class="clock">
+      <div class="time" id="clockTime">--:--</div>
+      <div class="date" id="clockDate">-- ---</div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('today')" id="tab-today">📅 Today</div>
+    <div class="tab" onclick="showTab('schedule')" id="tab-schedule">🗓 Schedule</div>
+    <div class="tab" onclick="showTab('settings')" id="tab-settings">⚙ Setup</div>
+  </div>
+</header>
+
+<main id="mainContent"></main>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════════════════
+// All times stored as UTC milliseconds. BST = UTC+6.
+// Derived from official ET schedule (EDT = UTC-4). BST = ET + 10h.
+
+const FLAGS = {
+  "Mexico":"🇲🇽","South Africa":"🇿🇦","South Korea":"🇰🇷","Czechia":"🇨🇿",
+  "Canada":"🇨🇦","Bosnia & Herz.":"🇧🇦","USA":"🇺🇸","Paraguay":"🇵🇾",
+  "Qatar":"🇶🇦","Switzerland":"🇨🇭","Brazil":"🇧🇷","Morocco":"🇲🇦",
+  "Haiti":"🇭🇹","Scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","Australia":"🇦🇺","Turkey":"🇹🇷",
+  "Germany":"🇩🇪","Curacao":"🇨🇼","Netherlands":"🇳🇱","Japan":"🇯🇵",
+  "Ivory Coast":"🇨🇮","Ecuador":"🇪🇨","Sweden":"🇸🇪","Tunisia":"🇹🇳",
+  "Spain":"🇪🇸","Cape Verde":"🇨🇻","Belgium":"🇧🇪","Egypt":"🇪🇬",
+  "Saudi Arabia":"🇸🇦","Uruguay":"🇺🇾","Iran":"🇮🇷","New Zealand":"🇳🇿",
+  "France":"🇫🇷","Senegal":"🇸🇳","Iraq":"🇮🇶","Norway":"🇳🇴",
+  "Argentina":"🇦🇷","Algeria":"🇩🇿","Austria":"🇦🇹","Jordan":"🇯🇴",
+  "Portugal":"🇵🇹","DR Congo":"🇨🇩","England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Croatia":"🇭🇷",
+  "Ghana":"🇬🇭","Panama":"🇵🇦","Uzbekistan":"🇺🇿","Colombia":"🇨🇴",
+  "TBD":"🌍"
+};
+
+function f(y,mo,d,h,mi){ // UTC timestamp from components
+  return Date.UTC(y,mo-1,d,h,mi,0);
+}
+// BST = UTC+6 → to get UTC from BST time, subtract 6 hours
+// ET (EDT) = UTC-4 → to get UTC from ET time, add 4 hours
+// So BST kickoff = ET kickoff + 10h → UTC kickoff = ET kickoff + 4h
+
+const MATCHES = [
+  // id, group, home, away, kickoffUTC, stage, venue
+  // Jun 11 – ET 15:00 = UTC 19:00
+  {id:1,g:"A",h:"Mexico",a:"South Africa",k:f(2026,6,11,19,0),s:"Group Stage",v:"Mexico City"},
+  // Jun 11 – ET 22:00 = UTC Jun 12 02:00
+  {id:2,g:"A",h:"South Korea",a:"Czechia",k:f(2026,6,12,2,0),s:"Group Stage",v:"Zapopan"},
+  // Jun 12 – ET 15:00 = UTC 19:00
+  {id:3,g:"B",h:"Canada",a:"Bosnia & Herz.",k:f(2026,6,12,19,0),s:"Group Stage",v:"Toronto"},
+  // Jun 12 – ET 21:00 = UTC Jun 13 01:00
+  {id:4,g:"D",h:"USA",a:"Paraguay",k:f(2026,6,13,1,0),s:"Group Stage",v:"Inglewood"},
+  // Jun 13 – ET 15:00 = UTC 19:00
+  {id:5,g:"B",h:"Qatar",a:"Switzerland",k:f(2026,6,13,19,0),s:"Group Stage",v:"Santa Clara"},
+  // Jun 13 – ET 18:00 = UTC 22:00
+  {id:6,g:"C",h:"Brazil",a:"Morocco",k:f(2026,6,13,22,0),s:"Group Stage",v:"East Rutherford"},
+  // Jun 13 – ET 21:00 = UTC Jun 14 01:00
+  {id:7,g:"C",h:"Haiti",a:"Scotland",k:f(2026,6,14,1,0),s:"Group Stage",v:"Foxborough"},
+  // Jun 14 – ET 00:00 = UTC 04:00
+  {id:8,g:"D",h:"Australia",a:"Turkey",k:f(2026,6,14,4,0),s:"Group Stage",v:"Vancouver"},
+  // Jun 14 – ET 13:00 = UTC 17:00
+  {id:9,g:"E",h:"Germany",a:"Curacao",k:f(2026,6,14,17,0),s:"Group Stage",v:"Houston"},
+  // Jun 14 – ET 16:00 = UTC 20:00
+  {id:10,g:"F",h:"Netherlands",a:"Japan",k:f(2026,6,14,20,0),s:"Group Stage",v:"Arlington"},
+  // Jun 14 – ET 19:00 = UTC 23:00
+  {id:11,g:"E",h:"Ivory Coast",a:"Ecuador",k:f(2026,6,14,23,0),s:"Group Stage",v:"Philadelphia"},
+  // Jun 14 – ET 22:00 = UTC Jun 15 02:00
+  {id:12,g:"F",h:"Sweden",a:"Tunisia",k:f(2026,6,15,2,0),s:"Group Stage",v:"Monterrey"},
+  // Jun 15 – ET 12:00 = UTC 16:00
+  {id:13,g:"H",h:"Spain",a:"Cape Verde",k:f(2026,6,15,16,0),s:"Group Stage",v:"Atlanta"},
+  // Jun 15 – ET 15:00 = UTC 19:00
+  {id:14,g:"G",h:"Belgium",a:"Egypt",k:f(2026,6,15,19,0),s:"Group Stage",v:"Seattle"},
+  // Jun 15 – ET 18:00 = UTC 22:00
+  {id:15,g:"H",h:"Saudi Arabia",a:"Uruguay",k:f(2026,6,15,22,0),s:"Group Stage",v:"Miami"},
+  // Jun 15 – ET 21:00 = UTC Jun 16 01:00
+  {id:16,g:"G",h:"Iran",a:"New Zealand",k:f(2026,6,16,1,0),s:"Group Stage",v:"Inglewood"},
+  // Jun 16 – ET 15:00 = UTC 19:00
+  {id:17,g:"I",h:"France",a:"Senegal",k:f(2026,6,16,19,0),s:"Group Stage",v:"East Rutherford"},
+  // Jun 16 – ET 18:00 = UTC 22:00
+  {id:18,g:"I",h:"Iraq",a:"Norway",k:f(2026,6,16,22,0),s:"Group Stage",v:"Foxborough"},
+  // Jun 16 – ET 21:00 = UTC Jun 17 01:00
+  {id:19,g:"J",h:"Argentina",a:"Algeria",k:f(2026,6,17,1,0),s:"Group Stage",v:"Kansas City"},
+  // Jun 17 – ET 00:00 = UTC 04:00
+  {id:20,g:"J",h:"Austria",a:"Jordan",k:f(2026,6,17,4,0),s:"Group Stage",v:"Santa Clara"},
+  // Jun 17 – ET 13:00 = UTC 17:00
+  {id:21,g:"K",h:"Portugal",a:"DR Congo",k:f(2026,6,17,17,0),s:"Group Stage",v:"Houston"},
+  // Jun 17 – ET 16:00 = UTC 20:00
+  {id:22,g:"L",h:"England",a:"Croatia",k:f(2026,6,17,20,0),s:"Group Stage",v:"Arlington"},
+  // Jun 17 – ET 19:00 = UTC 23:00
+  {id:23,g:"L",h:"Ghana",a:"Panama",k:f(2026,6,17,23,0),s:"Group Stage",v:"Toronto"},
+  // Jun 17 – ET 22:00 = UTC Jun 18 02:00
+  {id:24,g:"K",h:"Uzbekistan",a:"Colombia",k:f(2026,6,18,2,0),s:"Group Stage",v:"Mexico City"},
+  // Jun 18 – ET 12:00 = UTC 16:00
+  {id:25,g:"A",h:"Czechia",a:"South Africa",k:f(2026,6,18,16,0),s:"Group Stage",v:"Atlanta"},
+  // Jun 18 – ET 15:00 = UTC 19:00
+  {id:26,g:"B",h:"Switzerland",a:"Bosnia & Herz.",k:f(2026,6,18,19,0),s:"Group Stage",v:"Inglewood"},
+  // Jun 18 – ET 18:00 = UTC 22:00
+  {id:27,g:"B",h:"Canada",a:"Qatar",k:f(2026,6,18,22,0),s:"Group Stage",v:"Vancouver"},
+  // Jun 18 – ET 21:00 = UTC Jun 19 01:00
+  {id:28,g:"A",h:"Mexico",a:"South Korea",k:f(2026,6,19,1,0),s:"Group Stage",v:"Zapopan"},
+  // Jun 19 – ET 15:00 = UTC 19:00
+  {id:29,g:"D",h:"USA",a:"Australia",k:f(2026,6,19,19,0),s:"Group Stage",v:"Seattle"},
+  // Jun 19 – ET 18:00 = UTC 22:00
+  {id:30,g:"C",h:"Scotland",a:"Morocco",k:f(2026,6,19,22,0),s:"Group Stage",v:"Foxborough"},
+  // Jun 19 – ET 20:30 = UTC Jun 20 00:30
+  {id:31,g:"C",h:"Brazil",a:"Haiti",k:f(2026,6,20,0,30),s:"Group Stage",v:"Philadelphia"},
+  // Jun 19 – ET 23:00 = UTC Jun 20 03:00
+  {id:32,g:"D",h:"Turkey",a:"Paraguay",k:f(2026,6,20,3,0),s:"Group Stage",v:"Santa Clara"},
+  // Jun 20 – ET 13:00 = UTC 17:00
+  {id:33,g:"F",h:"Netherlands",a:"Sweden",k:f(2026,6,20,17,0),s:"Group Stage",v:"Houston"},
+  // Jun 20 – ET 16:00 = UTC 20:00
+  {id:34,g:"E",h:"Germany",a:"Ivory Coast",k:f(2026,6,20,20,0),s:"Group Stage",v:"Toronto"},
+  // Jun 20 – ET 20:00 = UTC Jun 21 00:00
+  {id:35,g:"E",h:"Ecuador",a:"Curacao",k:f(2026,6,21,0,0),s:"Group Stage",v:"Kansas City"},
+  // Jun 21 – ET 00:00 = UTC 04:00
+  {id:36,g:"F",h:"Tunisia",a:"Japan",k:f(2026,6,21,4,0),s:"Group Stage",v:"Monterrey"},
+  // Jun 21 – ET 12:00 = UTC 16:00
+  {id:37,g:"H",h:"Spain",a:"Saudi Arabia",k:f(2026,6,21,16,0),s:"Group Stage",v:"Atlanta"},
+  // Jun 21 – ET 15:00 = UTC 19:00
+  {id:38,g:"G",h:"Belgium",a:"Iran",k:f(2026,6,21,19,0),s:"Group Stage",v:"Inglewood"},
+  // Jun 21 – ET 18:00 = UTC 22:00
+  {id:39,g:"H",h:"Uruguay",a:"Cape Verde",k:f(2026,6,21,22,0),s:"Group Stage",v:"Miami"},
+  // Jun 21 – ET 21:00 = UTC Jun 22 01:00
+  {id:40,g:"G",h:"New Zealand",a:"Egypt",k:f(2026,6,22,1,0),s:"Group Stage",v:"Vancouver"},
+  // Jun 22 – ET 13:00 = UTC 17:00
+  {id:41,g:"J",h:"Argentina",a:"Austria",k:f(2026,6,22,17,0),s:"Group Stage",v:"Arlington"},
+  // Jun 22 – ET 17:00 = UTC 21:00
+  {id:42,g:"I",h:"France",a:"Iraq",k:f(2026,6,22,21,0),s:"Group Stage",v:"Philadelphia"},
+  // Jun 22 – ET 20:00 = UTC Jun 23 00:00
+  {id:43,g:"I",h:"Norway",a:"Senegal",k:f(2026,6,23,0,0),s:"Group Stage",v:"East Rutherford"},
+  // Jun 22 – ET 23:00 = UTC Jun 23 03:00
+  {id:44,g:"J",h:"Jordan",a:"Algeria",k:f(2026,6,23,3,0),s:"Group Stage",v:"Santa Clara"},
+  // Jun 23 – ET 13:00 = UTC 17:00
+  {id:45,g:"K",h:"Portugal",a:"Uzbekistan",k:f(2026,6,23,17,0),s:"Group Stage",v:"Houston"},
+  // Jun 23 – ET 16:00 = UTC 20:00
+  {id:46,g:"L",h:"England",a:"Ghana",k:f(2026,6,23,20,0),s:"Group Stage",v:"Foxborough"},
+  // Jun 23 – ET 19:00 = UTC 23:00
+  {id:47,g:"L",h:"Panama",a:"Croatia",k:f(2026,6,23,23,0),s:"Group Stage",v:"Toronto"},
+  // Jun 23 – ET 22:00 = UTC Jun 24 02:00
+  {id:48,g:"K",h:"Colombia",a:"DR Congo",k:f(2026,6,24,2,0),s:"Group Stage",v:"Zapopan"},
+  // Jun 24 – ET 15:00 = UTC 19:00 (simultaneous)
+  {id:49,g:"B",h:"Switzerland",a:"Canada",k:f(2026,6,24,19,0),s:"Group Stage",v:"Vancouver"},
+  {id:50,g:"B",h:"Bosnia & Herz.",a:"Qatar",k:f(2026,6,24,19,0),s:"Group Stage",v:"Seattle"},
+  // Jun 24 – ET 18:00 = UTC 22:00
+  {id:51,g:"C",h:"Scotland",a:"Brazil",k:f(2026,6,24,22,0),s:"Group Stage",v:"Miami"},
+  {id:52,g:"C",h:"Morocco",a:"Haiti",k:f(2026,6,24,22,0),s:"Group Stage",v:"Atlanta"},
+  // Jun 24 – ET 21:00 = UTC Jun 25 01:00
+  {id:53,g:"A",h:"Czechia",a:"Mexico",k:f(2026,6,25,1,0),s:"Group Stage",v:"Mexico City"},
+  {id:54,g:"A",h:"South Africa",a:"South Korea",k:f(2026,6,25,1,0),s:"Group Stage",v:"Monterrey"},
+  // Jun 25 – ET 16:00 = UTC 20:00
+  {id:55,g:"E",h:"Curacao",a:"Ivory Coast",k:f(2026,6,25,20,0),s:"Group Stage",v:"Philadelphia"},
+  {id:56,g:"E",h:"Ecuador",a:"Germany",k:f(2026,6,25,20,0),s:"Group Stage",v:"East Rutherford"},
+  // Jun 25 – ET 19:00 = UTC 23:00
+  {id:57,g:"F",h:"Japan",a:"Sweden",k:f(2026,6,25,23,0),s:"Group Stage",v:"Arlington"},
+  {id:58,g:"F",h:"Tunisia",a:"Netherlands",k:f(2026,6,25,23,0),s:"Group Stage",v:"Kansas City"},
+  // Jun 25 – ET 22:00 = UTC Jun 26 02:00
+  {id:59,g:"D",h:"Turkey",a:"USA",k:f(2026,6,26,2,0),s:"Group Stage",v:"Inglewood"},
+  {id:60,g:"D",h:"Paraguay",a:"Australia",k:f(2026,6,26,2,0),s:"Group Stage",v:"Santa Clara"},
+  // Jun 26 – ET 15:00 = UTC 19:00
+  {id:61,g:"I",h:"Norway",a:"France",k:f(2026,6,26,19,0),s:"Group Stage",v:"Foxborough"},
+  {id:62,g:"I",h:"Senegal",a:"Iraq",k:f(2026,6,26,19,0),s:"Group Stage",v:"Toronto"},
+  // Jun 26 – ET 20:00 = UTC Jun 27 00:00
+  {id:63,g:"H",h:"Cape Verde",a:"Saudi Arabia",k:f(2026,6,27,0,0),s:"Group Stage",v:"Houston"},
+  {id:64,g:"H",h:"Uruguay",a:"Spain",k:f(2026,6,27,0,0),s:"Group Stage",v:"Zapopan"},
+  // Jun 26 – ET 23:00 = UTC Jun 27 03:00
+  {id:65,g:"G",h:"Egypt",a:"Iran",k:f(2026,6,27,3,0),s:"Group Stage",v:"Seattle"},
+  {id:66,g:"G",h:"New Zealand",a:"Belgium",k:f(2026,6,27,3,0),s:"Group Stage",v:"Vancouver"},
+  // Jun 27 – ET 17:00 = UTC 21:00
+  {id:67,g:"L",h:"Panama",a:"England",k:f(2026,6,27,21,0),s:"Group Stage",v:"East Rutherford"},
+  {id:68,g:"L",h:"Croatia",a:"Ghana",k:f(2026,6,27,21,0),s:"Group Stage",v:"Philadelphia"},
+  // Jun 27 – ET 19:30 = UTC 23:30
+  {id:69,g:"K",h:"Colombia",a:"Portugal",k:f(2026,6,27,23,30),s:"Group Stage",v:"Miami"},
+  {id:70,g:"K",h:"DR Congo",a:"Uzbekistan",k:f(2026,6,27,23,30),s:"Group Stage",v:"Atlanta"},
+  // Jun 27 – ET 22:00 = UTC Jun 28 02:00
+  {id:71,g:"J",h:"Algeria",a:"Austria",k:f(2026,6,28,2,0),s:"Group Stage",v:"Kansas City"},
+  {id:72,g:"J",h:"Jordan",a:"Argentina",k:f(2026,6,28,2,0),s:"Group Stage",v:"Arlington"},
+  // Knockout placeholders (teams TBD after group stage)
+  {id:73,g:"R32",h:"TBD",a:"TBD",k:f(2026,6,28,19,0),s:"Round of 32",v:"Inglewood"},
+  {id:74,g:"R32",h:"TBD",a:"TBD",k:f(2026,6,29,17,0),s:"Round of 32",v:"Houston"},
+  {id:75,g:"R32",h:"TBD",a:"TBD",k:f(2026,6,29,20,30),s:"Round of 32",v:"Foxborough"},
+  {id:76,g:"R32",h:"TBD",a:"TBD",k:f(2026,6,29,23,0),s:"Round of 32",v:"Monterrey"},
+  {id:77,g:"QF",h:"TBD",a:"TBD",k:f(2026,7,9,20,0),s:"Quarterfinal",v:"TBD"},
+  {id:78,g:"SF",h:"TBD",a:"TBD",k:f(2026,7,14,19,0),s:"Semifinal",v:"Dallas"},
+  {id:79,g:"🏆",h:"TBD",a:"TBD",k:f(2026,7,19,19,0),s:"FINAL",v:"East Rutherford"},
+];
+
+// ═══════════════════════════════════════════════════════════════
+// TIME UTILS — BST = UTC+6
+// ═══════════════════════════════════════════════════════════════
+const BST_OFFSET = 6 * 60 * 60 * 1000;
+
+function nowBST(){ return Date.now() }
+
+function toBSTStr(utcMs, opts={}){
+  return new Date(utcMs).toLocaleString('en-GB', {
+    timeZone:'Asia/Dhaka', ...opts
+  });
+}
+function bstDateKey(utcMs){
+  return new Date(utcMs).toLocaleDateString('en-GB', {timeZone:'Asia/Dhaka',
+    weekday:'short', day:'2-digit', month:'short'});
+}
+function bstTimeStr(utcMs){
+  return new Date(utcMs).toLocaleTimeString('en-GB', {timeZone:'Asia/Dhaka',
+    hour:'2-digit', minute:'2-digit', hour12:true});
+}
+function isSameBSTDay(utcMs){
+  const a = new Date(utcMs).toLocaleDateString('en-GB',{timeZone:'Asia/Dhaka'});
+  const b = new Date().toLocaleDateString('en-GB',{timeZone:'Asia/Dhaka'});
+  return a === b;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════
+let activeTab = 'today';
+let analysisState = null; // {match, type:'pre'|'post', text, loading, error}
+let notifEnabled = {}; // {matchId: true/false}
+let apiKey = '';
+let sw = null;
+
+function loadState(){
+  try {
+    apiKey = localStorage.getItem('wc_apikey') || '';
+    notifEnabled = JSON.parse(localStorage.getItem('wc_notifs') || '{}');
+  } catch(e){}
+}
+function saveState(){
+  try {
+    localStorage.setItem('wc_apikey', apiKey);
+    localStorage.setItem('wc_notifs', JSON.stringify(notifEnabled));
+  } catch(e){}
+}
+
+// ═══════════════════════════════════════════════════════════════
+// MATCH STATUS
+// ═══════════════════════════════════════════════════════════════
+function matchStatus(m){
+  const now = Date.now();
+  const pre = m.k - now; // ms to kickoff
+  const post = now - m.k; // ms after kickoff
+  if(pre > 0) return {type:'upcoming', msPre:pre};
+  if(post < 110*60*1000) return {type:'live', msPost:post};
+  return {type:'ft', msPost:post};
+}
+
+function statusForDisplay(m){
+  const st = matchStatus(m);
+  if(st.type==='upcoming'){
+    const mins = st.msPre/60000;
+    if(mins < 60) return {label:`${Math.ceil(mins)}m`, cls:'status-upcoming'};
+    const h = Math.floor(mins/60), mn = Math.round(mins%60);
+    return {label:`${h}h ${mn}m`, cls:'status-upcoming'};
+  }
+  if(st.type==='live') return {label:'🔴 LIVE', cls:'status-live'};
+  return {label:'FT', cls:'status-ft'};
+}
+
+// should auto-show which analysis?
+function autoAnalysisType(m){
+  const st = matchStatus(m);
+  if(st.type==='upcoming' && st.msPre < 15*60*1000) return 'pre';
+  if(st.type==='live') return 'pre';
+  if(st.type==='ft') return 'post';
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SERVICE WORKER & NOTIFICATIONS
+// ═══════════════════════════════════════════════════════════════
+// initSW replaced by inline blob approach
+
+async function requestNotifPermission(){
+  if(!('Notification' in window)) return false;
+  const perm = await Notification.requestPermission();
+  return perm === 'granted';
+}
+
+function scheduleNotif(match, type){
+  if(!sw?.active) return;
+  const PRE_OFFSET  = 15 * 60 * 1000;  // 15 min before
+  const POST_OFFSET = 100 * 60 * 1000; // 100 min after
+
+  const fireAt = type === 'pre'
+    ? match.k - PRE_OFFSET
+    : match.k + POST_OFFSET;
+
+  if(fireAt < Date.now()) return; // past
+
+  const home = match.h, away = match.a;
+  const kickBST = bstTimeStr(match.k);
+  const title = type === 'pre'
+    ? `⚡ PRE-MATCH: ${home} vs ${away}`
+    : `📊 POST-MATCH: ${home} vs ${away}`;
+  const body = type === 'pre'
+    ? `Kickoff at ${kickBST} BST — tap for pre-match analysis`
+    : `Match ended — tap for post-match analysis`;
+
+  sw.active.postMessage({
+    type: 'SCHEDULE',
+    tag: `wc-${match.id}-${type}`,
+    fireAt,
+    title,
+    body
+  });
+}
+
+function cancelNotif(match, type){
+  if(!sw?.active) return;
+  sw.active.postMessage({
+    type: 'CANCEL',
+    tag: `wc-${match.id}-${type}`
+  });
+}
+
+async function toggleNotif(matchId){
+  const match = MATCHES.find(m=>m.id===matchId);
+  if(!match) return;
+
+  if(notifEnabled[matchId]){
+    // turn off
+    cancelNotif(match, 'pre');
+    cancelNotif(match, 'post');
+    delete notifEnabled[matchId];
+    saveState();
+    renderCurrent();
+    return;
+  }
+
+  // turn on
+  if(Notification.permission !== 'granted'){
+    const ok = await requestNotifPermission();
+    if(!ok){
+      alert('Please enable notifications in your browser/OS settings for this site, then try again.');
+      return;
+    }
+  }
+  notifEnabled[matchId] = true;
+  scheduleNotif(match, 'pre');
+  scheduleNotif(match, 'post');
+  saveState();
+  renderCurrent();
+}
+
+// Reschedule all enabled notifications on page load
+function rescheduleAll(){
+  Object.keys(notifEnabled).forEach(id=>{
+    const match = MATCHES.find(m=>m.id===Number(id));
+    if(!match) return;
+    scheduleNotif(match, 'pre');
+    scheduleNotif(match, 'post');
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ANALYSIS GENERATION
+// ═══════════════════════════════════════════════════════════════
+async function generateAnalysis(match, type){
+  if(!apiKey){
+    alert('Enter your Anthropic API key in the Setup tab first.');
+    showTab('settings');
+    return;
+  }
+
+  analysisState = { match, type, text:'', loading:true, error:'' };
+  showTab('analysis');
+  renderCurrent();
+
+  const home = match.h, away = match.a, venue = match.v, stage = match.s;
+  const kickBST = bstTimeStr(match.k);
+
+  const systemPrompt = type === 'pre'
+    ? 'You are a world-class football analyst. Give a sharp, structured pre-match analysis for FIFA World Cup 2026. Use web search for the latest squad, form, and tactical data. Keep each section tight — this is for a mobile reader.'
+    : 'You are a world-class football analyst. Give a sharp, insightful post-match analysis for FIFA World Cup 2026. Use web search to get the actual result, scorers, and key moments. Be analytical, go beyond the scoreline.';
+
+  const userPrompt = type === 'pre'
+    ? `PRE-MATCH: ${home} vs ${away} | WC2026 ${stage}, Group ${match.g}, ${venue}, kickoff ${kickBST} BST
+
+## 1. FIFA RANKINGS
+Current rank and recent trend for both teams.
+
+## 2. SQUAD — ${home}
+Expected Starting XI with positions and clubs. Key substitutes.
+
+## 3. SQUAD — ${away}
+Expected Starting XI with positions and clubs. Key substitutes.
+
+## 4. RECENT FORM
+Last 5 matches each — result, opponent, competition.
+
+## 5. PLAYERS TO WATCH
+3 key players each side with specific reasons.
+
+## 6. TACTICAL PREVIEW
+Expected formations. Key tactical battles. Pressing/defensive approach.
+
+## 7. PREDICTION
+Who wins and why. One key factor to watch.
+
+Search for confirmed lineups, injuries, and tactical news.`
+    : `POST-MATCH: ${home} vs ${away} | WC2026 ${stage}, Group ${match.g}, ${venue}
+
+## 1. RESULT
+Final score, all goalscorers with minute, cards, VAR decisions.
+
+## 2. PLAYERS TO WATCH — VERDICT
+Did the pre-identified key players deliver or disappoint?
+
+## 3. GAME-DEFINING MOMENT
+The single moment that changed this match.
+
+## 4. ${home} PERFORMANCE
+Strengths shown. Weaknesses exposed.
+
+## 5. ${away} PERFORMANCE
+Strengths shown. Weaknesses exposed.
+
+## 6. TACTICS & FORMATION
+What formation each team ran. Did it work? Key adjustments.
+
+## 7. RATINGS & VERDICT
+Top 3 performers with ratings /10. What this result means.
+
+Search for the actual match result, scorers, and tactical data.`;
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 2048,
+        system: systemPrompt,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        messages: [{ role: 'user', content: userPrompt }]
+      })
+    });
+
+    const data = await resp.json();
+    if(data.error) throw new Error(data.error.message);
+
+    const text = (data.content || [])
+      .filter(b => b.type === 'text')
+      .map(b => b.text)
+      .join('\n');
+
+    analysisState = { match, type, text: text || 'No analysis returned.', loading:false, error:'' };
+  } catch(err) {
+    analysisState = { match, type, text:'', loading:false,
+      error: `Failed to generate analysis: ${err.message}` };
+  }
+  renderCurrent();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// MARKDOWN RENDERER
+// ═══════════════════════════════════════════════════════════════
+function renderMarkdown(text){
+  if(!text) return '';
+  return text.split('\n').map(line => {
+    if(line.startsWith('## '))
+      return `<div class="md-h2">${line.slice(3)}</div>`;
+    if(line.startsWith('### '))
+      return `<div class="md-h3">${line.slice(4)}</div>`;
+    if(line.startsWith('- ') || line.startsWith('* '))
+      return `<div class="md-bullet">${line.slice(2)}</div>`;
+    if(line.trim() === '')
+      return '<div class="md-gap"></div>';
+    // bold standalone lines
+    if(line.startsWith('**') && line.endsWith('**'))
+      return `<div class="md-bold">${line.slice(2,-2)}</div>`;
+    return `<div class="md-p">${line.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')}</div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════════════════
+function showTab(tab){
+  if(tab !== 'analysis') analysisState = null;
+  activeTab = tab;
+  ['today','schedule','settings'].forEach(t=>{
+    document.getElementById('tab-'+t)?.classList.toggle('active', t===tab);
+  });
+  // hide analysis tab indicator if switching away
+  renderCurrent();
+}
+
+function renderCurrent(){
+  if(activeTab === 'analysis' && analysisState) return renderAnalysis();
+  if(activeTab === 'today') return renderToday();
+  if(activeTab === 'schedule') return renderSchedule();
+  if(activeTab === 'settings') return renderSettings();
+}
+
+// ── TODAY ──────────────────────────────────────────────
+function renderToday(){
+  const el = document.getElementById('mainContent');
+  const today = MATCHES.filter(m => isSameBSTDay(m.k));
+
+  let html = '';
+
+  // permission banner
+  if(Notification.permission === 'default'){
+    html += `<div class="perm-banner">
+      <div class="icon">🔔</div>
+      <div class="text">
+        <strong>Enable Notifications</strong>
+        Tap any 🔔 button on a match to get automatic pre & post-match alerts on your phone.
+      </div>
+    </div>`;
+  }
+
+  if(today.length === 0){
+    html += `<div class="empty"><div class="icon">🌙</div><p>No matches today in BST.<br>Check the Schedule tab.</p></div>`;
+  } else {
+    html += `<div class="day-label">Today — ${bstDateKey(Date.now())} · ${today.length} match${today.length>1?'es':''}</div>`;
+    today.forEach(m => { html += matchCard(m, true); });
+  }
+
+  el.innerHTML = html + '<div class="safe-bottom"></div>';
+}
+
+function matchCard(m, showNotif){
+  const st = statusForDisplay(m);
+  const mst = matchStatus(m);
+  const autoType = autoAnalysisType(m);
+  const nEnabled = !!notifEnabled[m.id];
+  const isLive = mst.type === 'live';
+  const isFT = mst.type === 'ft';
+  const canPre = mst.type === 'upcoming' && mst.msPre < 120*60*1000; // 2h window
+  const canPost = isFT;
+
+  // countdown
+  let countdown = '';
+  if(mst.type === 'upcoming'){
+    const mins = mst.msPre/60000;
+    const isSoon = mins < 30;
+    const h = Math.floor(mins/60), mn = Math.floor(mins%60), sc = Math.floor((mst.msPre/1000)%60);
+    const pad = n=>String(n).padStart(2,'0');
+    const cd = mins < 1 ? `${pad(sc)}s` : mins < 60 ? `${pad(Math.floor(mins))}:${pad(sc)}` : `${h}h ${pad(mn)}m`;
+    countdown = `<div class="countdown ${isSoon?'soon':''}">Kickoff in ${cd}</div>`;
+  }
+
+  const flag = t => FLAGS[t] || '🌍';
+
+  return `<div class="match-card ${isLive?'live-card':''} ${autoType?'analysis-card':''}">
+    <div class="card-top">
+      <div class="stage-badge">${m.s}${m.g&&m.g.length<=2?' · Group '+m.g:m.g?' · '+m.g:''} · ${m.v}</div>
+      <div class="status-badge ${st.cls}">${st.label}</div>
+    </div>
+    <div class="teams-row">
+      <div class="team-block">
+        <div class="team-flag">${flag(m.h)}</div>
+        <div class="team-name">${m.h}</div>
+      </div>
+      <div class="vs-sep">vs</div>
+      <div class="team-block">
+        <div class="team-flag">${flag(m.a)}</div>
+        <div class="team-name">${m.a}</div>
+      </div>
+    </div>
+    <div class="kickoff-row">
+      <div class="kickoff-time">${bstTimeStr(m.k)} BST</div>
+      ${countdown}
+    </div>
+    <div class="card-actions">
+      <button class="action-btn btn-pre ${m.h==='TBD'||(!canPre&&mst.type!=='live')?'':''}}"
+        ${m.h==='TBD'?'disabled':''}
+        onclick="generateAnalysis(MATCHES.find(x=>x.id===${m.id}),'pre')">
+        ⚡ Pre-Match
+      </button>
+      <button class="action-btn btn-post ${m.h==='TBD'||!canPost?'':''}"
+        ${m.h==='TBD'||!canPost?'disabled':''}
+        onclick="generateAnalysis(MATCHES.find(x=>x.id===${m.id}),'post')">
+        📊 Post-Match
+      </button>
+      ${showNotif ? `<button class="action-btn btn-notify ${nEnabled?'active':''}"
+        ${m.h==='TBD'?'disabled':''}
+        onclick="toggleNotif(${m.id});event.stopPropagation()">
+        ${nEnabled?'🔔 ON':'🔕 Alert'}
+      </button>` : ''}
+    </div>
+    ${autoType && m.h!=='TBD' ? `<div style="margin-top:10px">
+      <button class="btn btn-gold" style="width:100%;padding:10px"
+        onclick="generateAnalysis(MATCHES.find(x=>x.id===${m.id}),'${autoType}')">
+        ${autoType==='pre'?'⚡ Open Pre-Match Analysis':'📊 Open Post-Match Analysis'} →
+      </button>
+    </div>` : ''}
+  </div>`;
+}
+
+// ── SCHEDULE ───────────────────────────────────────────
+function renderSchedule(){
+  const el = document.getElementById('mainContent');
+  const byDate = {};
+  MATCHES.forEach(m => {
+    const dk = bstDateKey(m.k);
+    if(!byDate[dk]) byDate[dk] = [];
+    byDate[dk].push(m);
+  });
+
+  let html = '';
+  Object.entries(byDate).forEach(([dk, matches])=>{
+    html += `<div class="sched-date">${dk}</div>`;
+    matches.forEach(m=>{
+      const nOn = !!notifEnabled[m.id];
+      html += `<div class="sched-row" onclick="generateAnalysis(MATCHES.find(x=>x.id===${m.id}), '${autoAnalysisType(m)||'pre'}')">
+        <div class="sched-grp">${m.g}</div>
+        <div class="sched-teams">${m.h} vs ${m.a}</div>
+        <div class="sched-time">${bstTimeStr(m.k)}</div>
+        <div class="sched-notif" onclick="event.stopPropagation();toggleNotif(${m.id})" title="Toggle alert">${m.h==='TBD'?'':'${nOn?'🔔':'🔕'}'}</div>
+      </div>`;
+    });
+  });
+  // Fix the template literal issue for notif icon
+  el.innerHTML = html + '<div class="safe-bottom"></div>';
+  // Re-render properly
+  renderScheduleProper();
+}
+
+function renderScheduleProper(){
+  const el = document.getElementById('mainContent');
+  const byDate = {};
+  MATCHES.forEach(m => {
+    const dk = bstDateKey(m.k);
+    if(!byDate[dk]) byDate[dk] = [];
+    byDate[dk].push(m);
+  });
+
+  let html = '';
+  Object.entries(byDate).forEach(([dk, matches])=>{
+    html += `<div class="sched-date">${dk}</div>`;
+    matches.forEach(m=>{
+      const nOn = !!notifEnabled[m.id];
+      const atype = autoAnalysisType(m) || 'pre';
+      html += `<div class="sched-row" onclick="generateAnalysis(MATCHES.find(x=>x.id===${m.id}),'${atype}')">
+        <div class="sched-grp">${m.g}</div>
+        <div class="sched-teams">${m.h} vs ${m.a}</div>
+        <div class="sched-time">${bstTimeStr(m.k)}</div>
+        <div class="sched-notif" onclick="event.stopPropagation();toggleNotif(${m.id})">${m.h!=='TBD'?(nOn?'🔔':'🔕'):''}</div>
+      </div>`;
+    });
+  });
+  el.innerHTML = html + '<div class="safe-bottom"></div>';
+}
+
+// ── ANALYSIS ───────────────────────────────────────────
+function renderAnalysis(){
+  if(!analysisState){ showTab('today'); return; }
+  const { match:m, type, text, loading, error } = analysisState;
+  const el = document.getElementById('mainContent');
+  const flag = t => FLAGS[t] || '🌍';
+
+  let body = '';
+  if(loading){
+    body = `<div class="loading-state">
+      <div class="loading-icon">${type==='pre'?'🔍':'📊'}</div>
+      <div class="loading-text">Searching live data…</div>
+      <div class="loading-sub">${type==='pre'?'Fetching squads, form & tactics':'Fetching result, scorers & match stats'}</div>
+      <div class="progress-track"><div class="progress-bar"></div></div>
+    </div>`;
+  } else if(error){
+    body = `<div class="error-box">⚠️ ${error}<br><br>
+      <button class="btn btn-gold" onclick="generateAnalysis(MATCHES.find(x=>x.id===${m.id}),'${type}')">Retry</button>
+    </div>`;
+  } else {
+    body = `<div class="md-content">${renderMarkdown(text)}</div>`;
+  }
+
+  el.innerHTML = `
+    <div class="analysis-header">
+      <button class="back-btn" onclick="showTab('today')">← Back</button>
+      <div class="analysis-type-badge ${type==='pre'?'badge-pre':'badge-post'}">
+        ${type==='pre'?'⚡ PRE-MATCH ANALYSIS':'📊 POST-MATCH ANALYSIS'}
+      </div>
+      <div class="analysis-teams">
+        <div class="analysis-team"><div class="analysis-flag">${flag(m.h)}</div><div class="analysis-tname">${m.h}</div></div>
+        <div class="analysis-vs">vs</div>
+        <div class="analysis-team"><div class="analysis-flag">${flag(m.a)}</div><div class="analysis-tname">${m.a}</div></div>
+      </div>
+      <div class="analysis-meta">${m.s} · ${m.v} · ${bstTimeStr(m.k)} BST</div>
+    </div>
+    <div class="analysis-body">${body}</div>
+    <div class="safe-bottom"></div>`;
+}
+
+// ── SETTINGS ───────────────────────────────────────────
+function renderSettings(){
+  const el = document.getElementById('mainContent');
+  const notifCount = Object.keys(notifEnabled).length;
+  const notifStatus = Notification.permission;
+
+  el.innerHTML = `
+    <div class="settings-section">
+      <div class="settings-label">API Key</div>
+      <div class="setup-card">
+        <h2>Anthropic API Key</h2>
+        <p>Required to generate match analyses. Your key is stored only on this device and sent directly to Anthropic's API — never to any third party.</p>
+        <div class="input-row">
+          <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-..." value="${apiKey}">
+          <button class="btn btn-gold" onclick="saveApiKey()">Save</button>
+        </div>
+        <p style="font-size:11px;color:var(--dim)">
+          Get a key at <strong style="color:var(--gold)">console.anthropic.com</strong> → API Keys → Create key.<br>
+          The free tier gives $5 credit — enough for ~200 match analyses.
+        </p>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-label">Notifications</div>
+      <div class="settings-row">
+        <div class="icon">🔔</div>
+        <div class="info">
+          <strong>Notification Permission</strong>
+          <span>Status: <span style="color:${notifStatus==='granted'?'var(--green)':notifStatus==='denied'?'var(--red)':'#fbbf24'}">${notifStatus}</span></span>
+        </div>
+        <div class="action">
+          ${notifStatus !== 'granted'
+            ? `<button class="btn btn-gold" onclick="requestNotifPermission().then(renderSettings)">Enable</button>`
+            : `<span style="color:var(--green);font-size:20px">✓</span>`
+          }
+        </div>
+      </div>
+      <div class="settings-row">
+        <div class="icon">📅</div>
+        <div class="info">
+          <strong>Scheduled Alerts</strong>
+          <span>${notifCount} match${notifCount!==1?'es':''} with alerts enabled</span>
+        </div>
+        <div class="action">
+          ${notifCount>0?`<button class="btn btn-red" onclick="clearAllNotifs()">Clear All</button>`:''}
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--dim);margin-top:8px;line-height:1.6">
+        Alerts fire <strong style="color:var(--text)">15 min before kickoff</strong> (pre-match) and <strong style="color:var(--text)">100 min after kickoff</strong> (post-match).
+        For alerts to fire when the app is not open, install it as a PWA (see below) and keep the browser running in the background.
+      </p>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-label">Install as App (Required for Background Alerts)</div>
+      <div class="setup-card">
+        <h2>📲 Install on Your Phone</h2>
+        <p>Installing as a PWA allows notifications to fire when the app is minimised. One-time setup.</p>
+        <div style="margin-top:12px">
+          <div style="margin-bottom:10px;padding:10px 12px;background:#060b15;border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:700;color:var(--gold);margin-bottom:4px">Android (Chrome)</div>
+            <div style="font-size:12px;color:var(--dim);line-height:1.6">
+              1. Open this page in Chrome<br>
+              2. Tap the <strong style="color:var(--text)">⋮ menu</strong> (top right)<br>
+              3. Tap <strong style="color:var(--text)">"Add to Home Screen"</strong><br>
+              4. Tap <strong style="color:var(--text)">"Install"</strong>
+            </div>
+          </div>
+          <div style="padding:10px 12px;background:#060b15;border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:700;color:var(--gold);margin-bottom:4px">iOS (Safari)</div>
+            <div style="font-size:12px;color:var(--dim);line-height:1.6">
+              1. Open this page in Safari<br>
+              2. Tap the <strong style="color:var(--text)">Share button</strong> (□↑)<br>
+              3. Tap <strong style="color:var(--text)">"Add to Home Screen"</strong><br>
+              4. ⚠️ iOS limits background notifications — keep Safari open in background for best results
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-label">App Info</div>
+      <div class="settings-row">
+        <div class="icon">⚽</div>
+        <div class="info">
+          <strong>WC 2026 Match Analyst</strong>
+          <span>72 group stage matches · BST (UTC+6) · AI-powered</span>
+        </div>
+      </div>
+      <div class="settings-row">
+        <div class="icon">🌐</div>
+        <div class="info">
+          <strong>Analysis Engine</strong>
+          <span>Claude Sonnet 4.6 + live web search</span>
+        </div>
+      </div>
+    </div>
+    <div class="safe-bottom"></div>`;
+}
+
+function saveApiKey(){
+  apiKey = document.getElementById('apiKeyInput')?.value?.trim() || '';
+  saveState();
+  const btn = document.querySelector('#mainContent .btn-gold');
+  if(btn){ btn.textContent='Saved ✓'; setTimeout(()=>btn.textContent='Save', 1500); }
+}
+
+function clearAllNotifs(){
+  if(!confirm('Remove all scheduled alerts?')) return;
+  Object.keys(notifEnabled).forEach(id=>{
+    const m = MATCHES.find(x=>x.id===Number(id));
+    if(m){ cancelNotif(m,'pre'); cancelNotif(m,'post'); }
+  });
+  notifEnabled = {};
+  saveState();
+  renderSettings();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CLOCK
+// ═══════════════════════════════════════════════════════════════
+function updateClock(){
+  const now = new Date();
+  document.getElementById('clockTime').textContent =
+    now.toLocaleTimeString('en-GB',{timeZone:'Asia/Dhaka',hour:'2-digit',minute:'2-digit',hour12:true});
+  document.getElementById('clockDate').textContent =
+    now.toLocaleDateString('en-GB',{timeZone:'Asia/Dhaka',day:'2-digit',month:'short'});
+}
+
+// ═══════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════
+loadState();
+updateClock();
+setInterval(updateClock, 10000);
+// Refresh today view every 30s (countdown updates, status changes)
+setInterval(()=>{ if(activeTab==='today') renderCurrent(); }, 30000);
+
+// SW init handled by inline blob script above
+
+renderCurrent();
+</script>
+
+<script>
+// ── Inline manifest injection ──────────────────────────
+(function(){
+  const manifest = {
+    "name": "WC 2026 Match Analyst",
+    "short_name": "WC2026",
+    "description": "FIFA World Cup 2026 live pre & post-match AI analysis",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#080d18",
+    "theme_color": "#c8a84b",
+    "orientation": "portrait",
+    "icons": [
+      {"src": "data:image/png;base64,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", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+      {"src": "data:image/png;base64,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", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+    ]
+  };
+  const blob = new Blob([JSON.stringify(manifest)], {type:'application/manifest+json'});
+  const url = URL.createObjectURL(blob);
+  document.getElementById('manifestLink').href = url;
+})();
+
+// ── Inline Service Worker via blob URL ────────────────
+(function(){
+  if(!('serviceWorker' in navigator)) return;
+  const swCode = `// ═══════════════════════════════════════════════════════
+// WC2026 SERVICE WORKER
+// Fires scheduled notifications even when app is minimised
+// ═══════════════════════════════════════════════════════
+const CACHE = 'wc2026-v1';
+
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', e => e.waitUntil(clients.claim()));
+
+// Notification tap → open/focus app
+self.addEventListener('notificationclick', e => {
+  e.notification.close();
+  e.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then(list => {
+      if (list.length > 0) return list[0].focus();
+      return clients.openWindow('./');
+    })
+  );
+});
+
+// Receive scheduled notification requests from the page
+// Stored timers survive tab background (SW keeps running on Android Chrome)
+const timers = {};
+
+self.addEventListener('message', e => {
+  if (!e.data) return;
+
+  if (e.data.type === 'SCHEDULE') {
+    const { tag, fireAt, title, body } = e.data;
+    const delay = fireAt - Date.now();
+    if (delay <= 0) return;
+    if (timers[tag]) clearTimeout(timers[tag]);
+    timers[tag] = setTimeout(() => {
+      self.registration.showNotification(title, {
+        body,
+        tag,
+        icon: './icon-192.png',
+        badge: './icon-192.png',
+        vibrate: [300, 100, 300, 100, 300],
+        requireInteraction: true,
+        silent: false
+      });
+      delete timers[tag];
+    }, delay);
+  }
+
+  if (e.data.type === 'CANCEL') {
+    const { tag } = e.data;
+    if (timers[tag]) { clearTimeout(timers[tag]); delete timers[tag]; }
+    self.registration.getNotifications({ tag }).then(n => n.forEach(x => x.close()));
+  }
+
+  if (e.data.type === 'PING') {
+    // keep-alive from page; also re-confirms SW is active
+    e.source && e.source.postMessage({ type: 'PONG', timers: Object.keys(timers) });
+  }
+});
+`;
+  const blob = new Blob([swCode], {type:'application/javascript'});
+  const swUrl = URL.createObjectURL(blob);
+  
+  navigator.serviceWorker.register(swUrl, {scope: './'} )
+    .then(reg => {
+      sw = reg;
+      console.log('SW registered via blob');
+      setTimeout(rescheduleAll, 1000);
+      setInterval(()=>{
+        if(reg.active) reg.active.postMessage({type:'PING'});
+      }, 20000);
+    })
+    .catch(e => console.warn('SW blob failed:', e));
+})();
+</script>
+
+</body>
+</html>
 
